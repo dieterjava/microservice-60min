@@ -16,4 +16,5 @@ public class Thing {
     private String id;
     private String name;
     private String color;
+    private String comment;
 }
