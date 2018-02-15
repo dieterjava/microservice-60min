@@ -10,29 +10,24 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Ms60minApplication {
 
-	public static void main(String[] args) {
-		// when deployed as a docker container to Heroku
-		// Heroku sets the PORT environment variable
-		// The DYNO environment variable is just to make sure to run in an Heroku environment
-		String herokuPort = System.getenv().get("PORT");
-		String herokuDyno = System.getenv().get("DYNO");
-		if(herokuPort != null && herokuDyno != null) {
-			System.getProperties().put("server.port", herokuPort);
-		}
-		SpringApplication.run(Ms60minApplication.class, args);
-	}
+    public static void main(String[] args) {
+        // when deployed as a docker container to Heroku
+        // Heroku sets the PORT environment variable
+        // The DYNO environment variable is just to make sure to run in an Heroku environment
+        String herokuPort = System.getenv().get("PORT");
+        String herokuDyno = System.getenv().get("DYNO");
+        if (herokuPort != null && herokuDyno != null) {
+            System.getProperties().put("server.port", herokuPort);
+        }
+        SpringApplication.run(Ms60minApplication.class, args);
+    }
 
-	@Bean
-	CommandLineRunner init(ThingRepository thingRepository) {
-		return args -> {
-			thingRepository.save(new Thing("1", "VW", "Black", "blabla1"));
-			thingRepository.save(new Thing("2", "Porsche", "Red", "blabla2"));
-			thingRepository.save(new Thing("3", "Mercedes", "Gold", "blabla3"));
-			thingRepository.save(new Thing("4", "VW", "Red", "blabla4"));
-			thingRepository.save(new Thing("5", "Porsche", "Gold", "blabla5"));
-			thingRepository.save(new Thing("6", "Mercedes", "Black", "blabla6"));
-			thingRepository.save(new Thing("7", "Opel1", "Red", "blabla4"));
-			thingRepository.save(new Thing("8", "Opel2", "Gold", "blabla5"));
-			thingRepository.save(new Thing("9", "Opel3", "Black", "blabla6"));		};
-	}
+    @Bean
+    CommandLineRunner init(ThingRepository thingRepository) {
+        return args -> {
+            thingRepository.save(new Thing("1", "VW", "Black", "blabla1"));
+            thingRepository.save(new Thing("2", "Porsche", "Red", "blabla2"));
+            thingRepository.save(new Thing("3", "Mercedes", "Gold", "blabla3"));
+        };
+    }
 }
