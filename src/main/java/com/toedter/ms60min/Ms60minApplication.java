@@ -31,6 +31,8 @@ public class Ms60minApplication {
             thingRepository.save(new Thing("4", "VW", "Black", "blabla1"));
             thingRepository.save(new Thing("5", "Porsche", "Red", "blabla2"));
             thingRepository.save(new Thing("6", "Mercedes", "Gold", "blabla3"));
-        };
+            thingRepository.save(new Thing("7", "VW", "Black", "blabla1"));
+            thingRepository.save(new Thing("8", "Porsche", "Red", "blabla2"));
+            thingRepository.save(new Thing("9", "Mercedes", "Gold", "blabla3"));        };
     }
 }
