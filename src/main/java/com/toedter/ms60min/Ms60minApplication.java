@@ -28,12 +28,10 @@ public class Ms60minApplication {
             thingRepository.save(new Thing("1", "VW", "Black", "blabla1"));
             thingRepository.save(new Thing("2", "Porsche", "Red", "blabla2"));
             thingRepository.save(new Thing("3", "Mercedes", "Gold", "blabla3"));
-            thingRepository.save(new Thing("4", "VW", "Black", "blabla1"));
-            thingRepository.save(new Thing("5", "Porsche", "Red", "blabla2"));
-            thingRepository.save(new Thing("6", "Mercedes", "Gold", "blabla3"));
-            thingRepository.save(new Thing("7", "Opel1", "Black", "blabla1"));
-            thingRepository.save(new Thing("8", "Opel2", "Red", "blabla2"));
-            thingRepository.save(new Thing("9", "Opel3", "Gold", "blabla3"));
+            thingRepository.save(new Thing("4", "VW", "Black", "blabla4"));
+            thingRepository.save(new Thing("5", "Porsche", "Red", "blabla5"));
+            thingRepository.save(new Thing("6", "Mercedes", "Gold", "blabla6"));
+
         };
     }
 }
